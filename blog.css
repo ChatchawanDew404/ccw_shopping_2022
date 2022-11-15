@@ -1,0 +1,345 @@
+.blog-banner{
+    background: url('/shopImage/promotion-3.jpg');
+    height: 40vh;
+    background-size: cover;
+    display: flex;align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.blog-banner::after{
+content: '';
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;left: 0;
+background: rgba(0,0,0,0.6);
+z-index: -1;
+}
+
+.blog-banner h2{
+    color: white;
+    font-size: 50px;
+    z-index: 2;
+}
+
+
+.blog .container{
+    /* border: 1px solid red; */
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 80px;
+}
+
+h2{
+    font-size: 22px !important;
+}
+
+/*----- BOX LEFT ----- */
+.blog .box-1{margin-bottom: 100px;}
+.blog .container .blog-left .box-1 .image{
+    position: relative;
+}
+.blog .container .blog-left .box-1 .image .time{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+}
+
+.blog .container .blog-left .box-1 .image .time p{font-size: 12px;} 
+
+.blog .container .blog-left .box-1 .content h2{
+    cursor: pointer;
+    margin: 20px 0;
+}
+.blog .container .blog-left .box-1:hover .content h2{color: #ff4500;}
+.blog .container .blog-left .box-1 .content p{
+   color: gray;
+   font-weight: 100;
+   margin-bottom: 35px;
+   font-size: 15px;
+}
+
+.blog .container .blog-left .box-1 .content .comment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.blog .container .blog-left .box-1 .content ul li{
+display: inline-block;
+font-size: 13px;
+padding:0 3px;
+}
+
+.blog .container .blog-left .box-1 .content a{
+color: black;
+font-weight: 500;
+}
+
+.blog .container .blog-left .box-1 .content a:hover{
+color: orangered;
+cursor: pointer;
+}
+
+
+/* blog-left box-2 */
+.blog .container .blog-left .box-2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:40px 15px ;
+    margin-bottom: 100px;
+
+}
+
+.blog .container .blog-left .box-2  .image{
+    position: relative;
+}
+
+.blog .container .blog-left .box-2 .image .time{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    text-align: center;
+}
+
+.blog .container .blog-left .box-2 .image .time p{font-size: 10px;}
+
+.blog .container .blog-left .box-2 .mini-box:hover h5{color: orangered; cursor: pointer;}
+
+/* blog-left box-4  */
+.blog .container .blog-left .box-4{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.blog .container .blog-left .box-4 .mini-box-1{
+   display: flex;
+   gap: 10px;
+   /* align-items: center; */
+   margin-bottom: 20px;
+}
+.blog .container .blog-left .box-4 .mini-box-1:hover h5{color: orangered; cursor: pointer;}
+.blog .container .blog-left .box-4 .mini-box-1 p{
+   font-size: 14px;
+}
+.blog .container .blog-left .box-4 .mini-box-1 h5{
+   font-size: 14px;
+}
+.blog .container .blog-left .box-4 .mini-box-1 .image{
+   min-width: 130px;
+   max-width: 130px;
+   height: 100px;
+   position: relative;
+}
+
+
+.blog .container .blog-left .pages{
+    margin-top: 60px;
+    display: flex;
+    gap: 10px;
+}
+.blog .container .blog-left .pages li a{
+    font-size: 17px;
+    font-weight: 600;
+   border: 1px solid black;
+   border-radius: 50%;
+   display: inline-block;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 40px;
+   width: 40px;
+   margin-bottom: 120px;
+   color: orangered;
+}
+
+.blog .container .blog-left .pages li a:hover{color: white; background: orangered;}
+
+
+
+
+
+
+
+/*----------------------- BLOG RIGHT ------------------------*/
+/* .blog .container .blog-right{border: 1px solid rgb(25, 254, 29);} */
+
+.blog .container .blog-right .search{
+    position: relative;
+}
+.blog .container .blog-right .search input{
+    width: 100%;
+    border: 1px solid rgb(171, 171, 171);
+border-radius: 50px;
+padding: 10px 80px 10px 15px;
+}
+.blog .container .blog-right .search i{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    right: -20px;
+    background: rgb(255, 100, 44);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+.blog .container .blog-right .search i:hover{
+    background:orangered;
+    cursor: pointer;
+}
+
+/* Blog right category */
+.blog .container .blog-right .category{
+    margin-bottom: 40px;
+}
+
+.blog .container .blog-right .category h2{
+margin: 50px 0 20px;
+color: rgb(38, 38, 38);
+}
+.blog .container .blog-right .category ul li a{
+    color: gray;
+    display: block;
+padding: 10px 0;
+border-bottom: 1px solid rgb(235, 235, 235);
+}
+.blog .container .blog-right .category ul li a:hover{
+    color: orangered;
+    padding-left: 5px;
+}
+
+/* Blog right product */
+.blog .container .blog-right .products{
+    margin-bottom: 60px;
+}
+.blog .container .blog-right .products h2{
+    margin-bottom: 40px;
+}
+.blog .container .blog-right .products .mini-box{
+    display: flex; 
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.blog .container .blog-right .products .mini-box .image{
+    width: 120px;
+    height: 100px;
+}
+.blog .container .blog-right .products .mini-box .content{
+    color: rgb(170, 170, 170);
+    
+}
+.blog .container .blog-right .products .mini-box .content .title{
+    margin-bottom: 10px;
+    color: rgb(84, 82, 82);
+}
+.blog .container .blog-right .products .mini-box:hover .content .title{
+    color: orangered;
+    cursor: pointer;
+}
+
+/* Blog right archive */
+.blog .container .blog-right .archive{
+    margin-bottom: 80px;
+}
+.blog .container .blog-right .archive h2{
+    margin-bottom: 20px;
+}
+.blog .container .blog-right .archive ul li{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: gray;
+}
+.blog .container .blog-right .archive ul li:hover{
+color: orangered;
+ cursor: pointer;
+}
+
+/* Blog right Tags */
+.blog .container .blog-right .tags{
+    margin-bottom: 140px;
+}
+.blog .container .blog-right .tags h2{
+margin-bottom: 20px;
+}
+.blog .container .blog-right .tags span{
+    margin-bottom: 5px;
+    font-size: 15px;
+border: 1px solid gray;
+color: gray;
+border-radius: 20px;
+padding: 3px 10px;
+display: inline-block;
+}
+.blog .container .blog-right .tags span:hover{
+    cursor: pointer;
+  border-color: orangered;
+  color: orangered;
+}
+
+
+
+
+/* 
+============================================
+|                RESPONSIVE                |
+============================================
+*/
+
+@media(max-width:991px){
+    .blog .container{
+        /* border: 1px solid red; */
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media(max-width:880px){
+    .blog .container .blog-left .box-1 .content .comment {
+        display: grid;
+        gap: 20px;
+    }
+
+    .blog .container .blog-left .box-4 .mini-box-1 h5 {
+        font-size: 11px;
+    }
+}
+@media(max-width:768px){
+    .blog .container{
+        display: grid;
+        grid-template-columns:1fr;
+    }
+    .blog .container .blog-left .box-4 .mini-box-1 h5 {
+        font-size: 13px;
+    }
+
+    .blog .container .blog-right .search input {
+        padding: 13px 80px 13px 15px;
+    }
+}
+
+@media(max-width:576px){
+    .blog .container .blog-left .box-2 {
+        grid-template-columns: repeat(2,1fr);
+        gap: 40px 15px;
+    }
+    .blog .container .blog-left .box-4 .mini-box-1 h5 {
+        font-size: 14px;
+    }
+    .blog .container .blog-left .box-4 {
+        grid-template-columns: 1fr;
+    }
+}
+

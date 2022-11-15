@@ -1,0 +1,277 @@
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Register System @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+.register{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.9);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+/* open close register */
+.register.active{
+    display: flex;
+}
+.register-row{transform: scale(0);}
+.register-row.active{transform: scale(1);}
+
+
+.register .closeBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    color: black;
+    background: rgb(231, 231, 231);
+    border-radius: 0 0 0 10px;
+}
+.register .closeBtn:hover{
+    background: orangered;
+    color: white;
+    cursor: pointer;
+}
+/* ---------------------- */
+
+.register-row{
+    margin: 80px;
+    background: white;
+    max-width: 1000px;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+}
+
+.register-row .register-col{
+  text-align: center;
+}
+.register-row .register-col .registerBx{
+  padding:40px 20px;
+}
+/* Btn register change */
+.register-row .register-col .register-btn{
+    padding: 10px 0;
+    border: 1px solid rgb(207, 207, 207);
+    max-width: 150px;
+    background: rgb(233, 231, 231);
+    border-radius: 10px;
+    margin:0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+
+}
+.register-row .register-col .register-btn .register-color{
+    color: white;
+}
+.register-row .register-col .register-btn .change-btn{
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 50%;
+    height: 100%;
+    background: rgb(252, 85, 24);
+    border-radius: 10px;
+    z-index: -1;
+    color: white;
+}
+.register-row .register-col .register-btn.active .change-btn{
+    position: absolute;
+    left: 50%;
+    right: -1px !important;
+}
+
+/* Input register */
+.register-row .register-col .registerBx .inputBx{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.register-row .register-col .registerBx input,
+.register-row .register-col .registerBx textarea{
+    color: black !important;
+    background: rgb(237, 237, 237);
+    width: 100%;
+    padding:10px;
+    margin-bottom: 15px;
+}
+.register-row .register-col .registerBx textarea{resize: none; max-height: 100px;}
+
+/* Submit btn */
+.register-col .registerBx .submit-btn{
+    width: 100%;
+    background: rgb(255, 105, 50);
+    color: white;
+    padding: 10px;
+}
+.register-col .registerBx .submit-btn:hover{
+    background-color: orangered;
+    cursor: pointer;
+}
+
+/* Already forget-password and remember-Me*/
+.register-col .already-title{
+    text-align: left;
+   margin: 10px 0 20px;
+}
+.register-col .forget-password{
+    text-align: left;
+   margin: 10px 0 20px;
+   color: orangered;
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+.register-col .already-title span{
+    color: orangered;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* ---Icon--- */
+.register-col .social-icon{
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+align-items: center;
+}
+.register-col .social-icon li a i{
+   display: inline-block;
+width: 40px;
+height: 40px;
+margin: 0 10px;
+color: white;
+line-height: 40px;
+border-radius: 10px;
+}
+.register-col .social-icon li a i.fa-facebook{
+    background: #36528c;
+}
+.register-col .social-icon li a i.fa-instagram{
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+.register-col .social-icon li a i.fa-twitter{
+    background: #007ecc;
+}
+.register-col .social-icon li a i.fa-google-plus{
+    background: #d0423f;
+}
+
+.register-col .social-icon li a i:hover{
+    transform: scale(1.1);
+}
+
+/* Change login or register */
+.register-row .register-col .changeCart{
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+}
+.register-row .register-col .changeCart .register-cart,
+.register-row .register-col .changeCart .login-cart{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.register-row .register-col .changeCart .login-cart{
+    width: 100% !important;
+    left: 600px;
+}
+
+
+/* Remember Me and forget password */
+.register-col .checkUser{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.register-col .rememberMe input{
+width: 15px !important;
+}
+
+
+.register-col .login-cart .createAccount{
+    margin-top: 50px;
+}
+.register-col .login-cart .createAccount span{
+    color: orangered;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* 
+@@@@@@@@@@@@@@@@@@@@@@ MEDIA QUERY @@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+
+
+@media(max-width:991px){
+    /* Register system */
+    .register-row{
+        width: 100%;
+        min-width: 300px;
+        max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+    .register-row .regis-img{
+        display: none;
+    }
+
+    .register-row .register-col .changeCart .login-cart{
+        width: 100% !important;
+        left: 900px ;
+    }
+
+}
+
+
+@media(max-width:640px){
+    /* Register system */
+    .register-row{margin: 60px;}
+
+}
+
+@media(max-width:480px){
+    /* register */
+    .register-col .checkUser{
+        /* display: block;
+        text-align: left; */
+        font-size: 13px;
+        }
+        .register-row .register-col .changeCart{
+            position: relative;
+            height: 550px;
+        }
+        
+        /* .register-col .rememberMe input{
+            margin-top: 20px;
+        width: 15px !important;
+        } */
+
+        .register-col .login-cart .createAccount{
+            font-size: 14px;
+        }
+    
+}
+@media(max-width:380px){
+    /* Register  */
+    .login-cart .createAccount{
+        font-size: 13px !important;
+    }
+}
+
+
+
+
+

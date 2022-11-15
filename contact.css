@@ -1,0 +1,111 @@
+.contact-banner{
+    background: url('/shopImage/promotion-5.jpg');
+    height: 40vh;
+    background-size: cover;
+    display: flex;align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.contact-banner::after{
+content: '';
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;left: 0;
+background: rgba(0,0,0,0.6);
+z-index: -1;
+}
+
+.contact-banner h2{
+    color: white;
+    font-size: 50px;
+    z-index: 2;
+}
+
+
+/* Contact */
+.contact{
+    margin: 100px 0;
+}
+.contact .map iframe{
+    width: 100%;
+}
+
+.contact-row{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.contact .contact-row .contact-col h2{
+    margin-bottom: 20px;
+}
+.contact .contact-row .contact-col form .input-bx{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+}
+
+.contact .contact-row .contact-col form input,
+.contact .contact-row .contact-col form textarea{
+    resize: none;
+   width: 100%;
+   border: 1px solid gainsboro;
+   margin-bottom: 20px;
+   padding: 10px;
+}
+
+.contact .contact-row .contact-col form button{
+    background: rgb(253, 114, 33);
+    color: white;
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.contact .contact-row .contact-col form button:hover{
+    background:orangered;
+    cursor: pointer;
+}
+/* contact-col right */
+/* .contact .contact-row .contact-col{
+    border: 1px solid red;
+} */
+.contact .contact-row .contact-col .box{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+.contact .contact-row .contact-col .box:nth-child(1){
+    margin-top: 60px;
+}
+.contact .contact-row .contact-col .box i{
+    color: gray;
+    font-size: 30px;
+}
+
+.contact .contact-row .contact-col .box h4{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.contact .contact-row .contact-col .box p{
+    color: gray;
+    font-size: 13px;
+    color: orangered;
+}
+
+
+
+@media(max-width:768px){
+    .contact-row{
+        grid-template-columns:1fr;
+    }
+    .contact .contact-row .contact-col form .input-bx{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+@media(max-width:768px){}
+@media(max-width:768px){}

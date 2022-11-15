@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCW Feature</title>
+    <link rel="stylesheet" href="/component/navbar.css">
+    <link rel="stylesheet" href="/component/footer.css">
+    <link rel="stylesheet" href="/component/register.css">
+    <link rel="stylesheet" href="feature.css">
+        <!-- Font awesome ฉุกเฉิน -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+       
+<section class="register">
+    <div class="register-row ">
+ 
+     <div class="register-col regis-img"><img src="/shopImage/promotion-4.jpg" alt=""></div>
+ 
+     <div class="register-col">
+         
+         <div class="closeBtn">x</div>
+ 
+         <div class="registerBx">
+ 
+             <div class="register-btn">
+                 <p class="register-color">Register</p>
+                 <p class="login-color">Login</p>
+                 <button class="change-btn"></button>
+             </div>
+ 
+             <!-- Register and login box -->
+           <div class="changeCart">
+             <div class="register-cart">
+ 
+                 <div class="inputBx">
+                   <input type="text" placeholder="Enter you fristname">
+                   <input type="text" placeholder="Enter you lastname">
+                 </div>
+                 <input type="text" placeholder="Enter you email">
+                 <input type="text" placeholder="Enter you password">
+                 <textarea name="" id="" cols="30" rows="10" placeholder="Enter you address"></textarea>
+                 <button class="submit-btn">Register</button>
+                 <p class="already-title">Already have an account <span class="clickLogin">Login</span></p>
+                 <p>or</p>
+   
+                 <ul class="social-icon">
+                   <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                   <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                   <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                   <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                 </ul>
+               </div>
+               <div class="login-cart">
+                 <input type="text" placeholder="Enter you fristname">
+                 <input type="text" placeholder="Enter you lastname">
+                   <input type="text" placeholder="Enter you email">
+                   <input type="text" placeholder="Enter you password">
+                   
+                   <button class="submit-btn">Register</button>
+ 
+                   <div class="checkUser">
+                    <div class="rememberMe">
+                     <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                     <label for="vehicle1"> Remember Me</label>
+                    </div>
+                    <p class="forget-password">Forget password ? </p>
+                   </div>
+ 
+                  
+                   <p>or</p>
+     
+                   <ul class="social-icon">
+                     <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                     <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                     <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                     <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                   </ul>
+ 
+                   <div class="createAccount"><p>Don't have any account ? <span class="clickRegister">Register Now</span></p></div>
+               </div>
+   
+           </div>
+      
+         </div>
+     </div>
+    </div>
+ </section>
+    
+ <!-------------------------------- Top navbar------------------------ -->
+ <div class="top-nav">
+     <div class="container">
+         <div class="top-nav-left">
+             <span><i class="fa fa-envelope" aria-hidden="true"></i> examplePJ1234@gmail.com</span>
+             <span><i class="fa fa-phone" aria-hidden="true"></i> +012 345 6789</span>
+         </div>
+         <div class="top-nav-right">
+                 <span><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
+                 <span><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
+                 <span><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></span>
+                 <span><a href=""><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></span>
+                 <span><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></span>
+         </div>
+     </div>
+ </div>
+ 
+ 
+ <nav class="navigationBar" id="navigationBar">
+    <div class="container">
+        <a href="" class="logo"><i class="fa fa-shopping-bag" aria-hidden="true"></i> CCW STORE</a>
+
+        <div class="menuBar">
+            <span class="b1">.</span>
+            <span class="b2">.</span>
+            <span class="b3">.</span>
+        </div>
+
+        <ul class="navList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="feature.html" class="active">Feature</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="btn-cart-login">
+            <button class="cartBtn" id="cartBtn">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <div class="amountCart">0</div>
+            </button>
+            <button class="loginBtn" id="loginBtn"><i class="fa fa-user" aria-hidden="true"></i></button>
+        </div>
+
+
+    </div>
+
+    <div class="navbar-slide-bg"></div>
+
+    <div class="navbar-slide">
+        <div class="nav-slide-header">
+            <h2>YOUR CART</h2>
+            <i class='bx bx-x' id="navbar-slide-close"></i>
+        </div>
+
+        <div class="navbar-slide-product-container">
+
+            <div class="navbar-slide-product">
+                <div class="image"><img src="/shopImage/product-01.jpg" alt=""></div>
+                <div class="content">
+                    <p class="title">White Shirt Pleat</p>
+                    <div class="navbar-slide-product-sum">
+                        <span class="quantity">1</span> x <span class="price">50.00$</span>
+                    </div>
+                </div>
+                <div class="delete-product">
+                    <i class='bx bxs-trash'></i>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="navbar-slide-total">
+            <p>Sub Total :</p>
+            <p class="navbar-total">00.00$</p>
+        </div>
+
+        <button class="nav-view"><a href="feature.html">View Cart</a></button>
+    </div>
+
+</nav>
+
+
+
+<!--======================================= 
+                 FEATURE
+=======================================-->
+<div class="feature">
+<div class="container">
+
+     <!-- ========================= FEATURE LEFT =========================== -->
+    <div class="feature-left">
+     <div class="feature-header">
+        <ul>
+            <li>Product</li>
+            <li>Price</li>
+            <li>Quantity</li>
+            <li>Total</li>
+            <li>Delete</li>
+        </ul>
+     </div>
+
+     <!-- feature-product-container -->
+     <div class="feature-product-container">
+
+
+        <!--- show in feature.js ---->
+        <!-- <div class="feature-product">
+            <div class="product-user">
+               <div class="image"> <img src="/shopImage/product-01.jpg" alt=""></div>
+                <div class="title">Esprit Ruffle Shirt</div>
+            </div>
+            <div class="feature-price">$00.00</div>
+            <div class="feature-quantity">
+                <span class="decrease">-</span>
+                  <input type="text" value="0" class="value-product"/>
+                <span class="increase">+</span>
+            </div>
+                    <div class="feature-total">$00.00</div>
+                    <div class="delete"><i class='bx bxs-trash'></i></div>
+        </div> -->
+
+
+     </div>
+          <h2 class="no-have-product">No have Product</h2>
+       <!-- feature-left-bottom -->
+       <div class="feature-left-button">
+        <div class="feature-code">
+            <input type="text" placeholder="Coupon Code...">
+            <button>Apply Coupon</button>
+        </div>
+
+        <button class="update-feature">Update Total</button>
+        <button><a href="shop.html">Continue Shopping</a></button>
+    </div>
+    </div>
+
+
+    <!-- ========================= FEATURE RIGHT =========================== -->
+    <div class="feature-right">
+    <div class="feature-right-header">
+        <p>CART TOTAL</p>
+    </div>
+
+    <div class="feature-subTotal">
+        <span>SubTotal :</span>
+        <span class="subTotal">$00.00</span>
+    </div>
+    <div class="feature-tax">
+        <span>Sales Tax (7%) :</span>
+        <span class="tax">$00.00</span>
+    </div>
+    <div class="feature-coupon">
+        <span >Coupon Code :</span>
+        <span class="coupon">$00.00</span>
+    </div>
+
+
+    <!-- Feature-right-Form -->
+    <form action="">
+        <div class="feature-input-bx">
+            <label for="counrtry">Country</label>
+            <input type="text" id="country" placeholder="Enter you Country">
+        </div>
+        <div class="feature-input-bx">
+            <label for="state">State/Province</label>
+            <input type="text" id="state" placeholder="Enter you State/Province">
+        </div>
+        <div class="feature-input-bx">
+            <label for="city">Suburb/City</label>
+            <input type="text" id="ity" placeholder="Enter you Suburb/City">
+        </div>
+        <div class="feature-input-bx">
+            <label for="postcode">Zip/PostCode</label>
+            <input type="text" id="postcode" placeholder="Enter you Zip/postcode">
+        </div>
+
+        <div class="proceed">
+            <div class="proceed-total">
+                <span>Total :</span>
+                <span class="total">$00.00</span>
+            </div>
+            <button class="checkout">PROCEED TO CHECKOUT</button>
+        </div>
+    </form>
+
+    </div>
+</div>
+</div>
+
+
+
+
+
+<!-- Footer section -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-row">
+
+        <div class="footer-col">
+            <h5>CATEGORIES</h5>
+             <ul>
+                <li><a href="">Women</a></li>
+                <li><a href="">Men</a></li>
+                <li><a href="">Shoes</a></li>
+                <li><a href="">Watches</a></li>
+            </ul>
+        </div>
+
+
+        <div class="footer-col">
+            <h5>HELP</h5>
+            <ul>
+                <li><a href="">Track Order</a></li>
+                <li><a href="">Returns</a></li>
+                <li><a href="">Shipping</a></li>
+                <li><a href="">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>GET IN TOUCH</h5>
+            <p>Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 23 456 7890</p>
+        </div>
+
+        <div class="footer-col">
+            <h5>NEWSLETTER</h5>
+            <input type="text" placeholder="example1234@gmail.com">
+            <button>Subscribe</button>
+        </div>
+
+    </div>
+
+    <div class="allCredit">
+        <span><img src="/shopImage/icon-pay-01.png" alt=""></span>
+        <span><img src="/shopImage/icon-pay-02.png" alt=""></span>
+        <span><img src="/shopImage/icon-pay-03.png" alt=""></span>
+        <span><img src="/shopImage/icon-pay-04.png" alt=""></span>
+        <span><img src="/shopImage/icon-pay-05.png" alt=""></span>
+    </div>
+<div class="credit-builder">
+    <p>Copyright ©2022 All rights reserved | Made with <i class='bx bx-heart'></i> by CCW </p>
+</div>
+    </div>
+</footer>
+
+
+
+
+    <!-- Font awesome cdn -->
+<script src="/systemShopping/fontawesome.min.js"></script>
+<!-- Swiper CDN -->
+<script src="/swiperCDN/swiper-bundle.min.js"></script>
+<!-- Sweet alert -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- System Javascript -->
+<script src="/systemShopping/data.js"></script>
+<script src="/systemShopping/navbar.js"></script>
+<script src="/systemShopping/register.js"></script>
+<script src="/systemShopping/feature.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!--======================================
+     MADE  5/10/2022  TO  5/10/2022  
+======================================-->

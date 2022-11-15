@@ -1,0 +1,1089 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    transition: .5s;
+}
+
+.container{
+    /* border: 1px solid red; */
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 10px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Register System @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+.register{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.9);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+/* open close register */
+.register.active{
+    display: flex;
+}
+.register-row{transform: scale(0);}
+.register-row.active{transform: scale(1);}
+
+
+.register .closeBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    color: black;
+    background: rgb(231, 231, 231);
+    border-radius: 0 0 0 10px;
+}
+.register .closeBtn:hover{
+    background: orangered;
+    color: white;
+    cursor: pointer;
+}
+/* ---------------------- */
+
+.register-row{
+    margin: 80px;
+    background: white;
+    max-width: 1000px;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+}
+
+.register-row .register-col{
+  text-align: center;
+}
+.register-row .register-col .registerBx{
+  padding:40px 20px;
+}
+/* Btn register change */
+.register-row .register-col .register-btn{
+    padding: 10px 0;
+    border: 1px solid rgb(207, 207, 207);
+    max-width: 150px;
+    background: rgb(233, 231, 231);
+    border-radius: 10px;
+    margin:0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+
+}
+.register-row .register-col .register-btn .register-color{
+    color: white;
+}
+.register-row .register-col .register-btn .change-btn{
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 50%;
+    height: 100%;
+    background: rgb(252, 85, 24);
+    border-radius: 10px;
+    z-index: -1;
+    color: white;
+}
+.register-row .register-col .register-btn.active .change-btn{
+    position: absolute;
+    left: 50%;
+    right: -1px !important;
+}
+
+/* Input register */
+.register-row .register-col .registerBx .inputBx{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.register-row .register-col .registerBx input,
+.register-row .register-col .registerBx textarea{
+    color: black !important;
+    background: rgb(237, 237, 237);
+    width: 100%;
+    padding:10px;
+    margin-bottom: 15px;
+}
+.register-row .register-col .registerBx textarea{resize: none; max-height: 100px;}
+
+/* Submit btn */
+.register-col .registerBx .submit-btn{
+    width: 100%;
+    background: rgb(255, 105, 50);
+    color: white;
+    padding: 10px;
+}
+.register-col .registerBx .submit-btn:hover{
+    background-color: orangered;
+    cursor: pointer;
+}
+
+/* Already forget-password and remember-Me*/
+.register-col .already-title{
+    text-align: left;
+   margin: 10px 0 20px;
+}
+.register-col .forget-password{
+    text-align: left;
+   margin: 10px 0 20px;
+   color: orangered;
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+.register-col .already-title span{
+    color: orangered;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* ---Icon--- */
+.register-col .social-icon{
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+align-items: center;
+}
+.register-col .social-icon li a i{
+   display: inline-block;
+width: 40px;
+height: 40px;
+margin: 0 10px;
+color: white;
+line-height: 40px;
+border-radius: 10px;
+}
+.register-col .social-icon li a i.fa-facebook{
+    background: #36528c;
+}
+.register-col .social-icon li a i.fa-instagram{
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+.register-col .social-icon li a i.fa-twitter{
+    background: #007ecc;
+}
+.register-col .social-icon li a i.fa-google-plus{
+    background: #d0423f;
+}
+
+.register-col .social-icon li a i:hover{
+    transform: scale(1.1);
+}
+
+/* Change login or register */
+.register-row .register-col .changeCart{
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+}
+.register-row .register-col .changeCart .register-cart,
+.register-row .register-col .changeCart .login-cart{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.register-row .register-col .changeCart .login-cart{
+    width: 100% !important;
+    left: 600px;
+}
+
+
+/* Remember Me and forget password */
+.register-col .checkUser{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.register-col .rememberMe input{
+width: 15px !important;
+}
+
+
+.register-col .login-cart .createAccount{
+    margin-top: 50px;
+}
+.register-col .login-cart .createAccount span{
+    color: orangered;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Top-Navbar @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.top-nav{
+    background: rgb(33, 32, 32);
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+}
+
+.top-nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-nav .container .top-nav-left i:hover,
+.top-nav .container .top-nav-left i:hover{
+    background: #000;
+    cursor: pointer;
+}
+
+.top-nav .container .top-nav-left span{
+    margin-right: 15px;
+}
+.top-nav .container .top-nav-right span i{
+    color: white;
+    border-right: 1px solid rgb(50, 46, 46);    
+    padding: 10px 15px;
+}
+.top-nav .container .top-nav-right span:first-child i{
+    border-left: 1px solid rgb(50, 46, 46); 
+}
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Navbar @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.navigationBar{
+    background: rgb(241, 241, 241);
+    position: relative;
+    z-index: 999;
+    transition: top .5s !important;
+}
+.navigationBar.active{
+    position: sticky;
+    width: 100%;
+    top: 0;
+   box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+
+.navigationBar .container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigationBar .container .logo{
+    color: rgb(36, 34, 34);
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -1px;
+
+}
+
+.navigationBar .container .logo i{
+    color: rgb(255, 72, 0);
+}
+
+.navigationBar .container .navList{
+    display: flex;
+}
+.navigationBar .container .navList li a{
+    display: inline-block;
+    padding:20px 10px;
+    color: black;
+    transition: all .2s ease;
+}
+
+.navigationBar .container .navList li a:hover{
+    background-color: rgb(243, 74, 7);
+    color: white;
+}
+
+/* button card and login */
+.btn-cart-login button{
+    display: inline-block;
+    font-size: 18px;
+    background: rgb(220, 218, 218);
+    padding:4px 15px;
+    border-radius: 5px;
+}
+.btn-cart-login button:hover{
+    color: white;
+    background-color: rgba(243, 72, 5, 0.7);
+    cursor: pointer;
+}
+.btn-cart-login .cartBtn{display: inline-block; position: relative;}
+.btn-cart-login .cartBtn .amountCart{
+    position: absolute; 
+    top: -10px;
+    background: orangered;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+right: -10px;}
+.btn-cart-login .loginBtn{
+    margin-left: 10px;
+}
+.menuBar{
+    cursor: pointer;
+    display: none;
+    transform: rotate(90deg);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(137, 135, 135);
+    background: rgb(232, 231, 231);
+    transition: 0.4s;
+}
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Header Section @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.header .swiper-slide {
+    position: relative;
+}
+.header .swiper-slide::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(164, 164, 164, 0.5);
+    z-index: -1;
+}
+.header .swiper-slide .container{
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+.header .swiper .show-header-1{
+    min-height: 90vh;
+    background: url(/shopImage/slide-01.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.header .swiper .show-header-2{
+    min-height: 90vh;
+    background: url(/shopImage/slide-02.jpg);
+     background-position: center; 
+      background-size: cover;
+}
+.header .swiper .show-header-3{
+    height: 90vh;
+    background: url(/shopImage/slide-03.jpg);
+    background-position: center;
+        background-size: cover; 
+}
+
+.header .swiper-slide .container .content{
+ max-width: 500px;
+ margin:0 6rem;
+}
+.header .swiper-slide .container .content span{
+font-size: 14px;
+}
+.header .swiper-slide .container .content h3{
+font-size: 40px;
+font-weight: 600;
+}
+.header .swiper-slide .container .content h2{
+font-size: 50px;
+font-weight: 600;
+}
+.header .swiper-slide .container .content  p{
+    margin-bottom: 20px;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+   height: 3rem !important;
+   width: 3rem  !important;
+   line-height: 3rem !important;
+   background: rgb(255, 97, 40);
+   color:white !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+   background:orangered;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+   font-size: 2rem !important;
+}
+
+/* button header */
+.header .content .header-btn{
+    display: inline-block;
+    font-size: 16px;
+    padding: 12px 40px;
+    border-radius: 5px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.header .content .header-btn-shop:hover,
+.header .content .header-btn-register:hover{
+background: orangered;
+}
+.header .header-btn-login:hover{
+    border: 1px solid rgb(186, 183, 183);
+}
+.header-btn-bx{
+    display: grid;
+    gap: 20px;
+    display: flex;
+    
+}
+
+.header .header-btn-shop{background: rgb(236, 100, 50);}
+.header .header-btn-shop a{ color: rgb(255, 255, 255);}
+.header .header-btn-login{background: rgb(255, 255, 255); border: 1px solid rgb(234, 231, 231); color: orangered;}
+.header .header-btn-register{background: rgb(236, 100, 50); color: white; }
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Promotion Section @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.promotion-header{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background: rgb(237, 237, 237);
+    border-left: 8px solid orangered;
+    padding: 10px;
+}
+.promotion-header marquee{
+    margin: -5px 0;
+}
+.promotion-header marquee span{
+    margin: 0 0 0 200px;
+}
+.promotion .promotion-row{
+    display: grid;
+grid-template-columns: repeat(4,1fr);
+gap: 20px;
+}
+.promotion .promotion-col .image{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.promotion .promotion-col:hover img{transform: scale(1.1);}
+.promotion .promotion-col .image::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 0;
+}
+
+.promotion .promotion-col .po-content{
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    color: white;
+    font-size: 15px;
+}
+.promotion .promotion-col button{
+    margin-top: 10px;
+    padding: 8px 20px;
+    background: rgb(247, 100, 47);
+    color: white;
+    border-radius: 5px;
+}
+.promotion .promotion-col button:hover{
+    background: orangered;
+    cursor: pointer;
+}
+.promotion .promotion-col h3{
+    color: white;
+    font-size: 22px;
+}
+.promotion .po-2 h3,
+.promotion .po-3 h3,
+.promotion .po-4 h3,
+.promotion .po-5 h3{
+    font-size: 15px !important;
+    color: white;
+    font-weight: 500;
+}
+
+
+.promotion .po-1{
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Product category @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.product-category-row{
+    display: flex;
+    margin-top: 100px;
+}
+.product-category-col{
+    position: relative;
+    transition: all .4s ease;
+    border: 1px solid rgb(240, 240, 240);
+}
+.product-category-col .image img{
+    background-position: right;
+    position: relative;
+}
+.product-category-col .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all .4s ease;
+    text-align: center;
+}
+.product-category-col .content h2{opacity: 0; font-size: 30px;}
+.product-category-col .content h2 a{color: white;}
+.product-category-col:hover .content{
+    background: rgb(0, 0, 0,.9);
+}
+.product-category-col:hover h2{
+    cursor: pointer;
+    opacity: 1;
+}
+.product-category-col h2 a:hover{color: orangered;}
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Popular Section @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.popular{
+    margin-top: 200px;
+    padding: 40px 0 80px;
+    background: rgb(238, 238, 238);
+}
+.header-content{
+    margin: auto;
+    text-align: center;
+    max-width: 500px;
+    margin-bottom: 80px;
+}
+.header-content h2{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.popular .popular-row{
+ display: grid;
+ grid-template-columns: repeat(auto-fit,minmax(225px,1fr));
+ gap:50px 20px;
+}
+
+.popular .popular-col {margin: auto;}
+
+.popular .popular-col .image{
+    position: relative;
+    overflow: hidden;
+    height: 310px;
+}
+.popular .popular-col.image img{
+    position: absolute;
+}
+
+.popular .popular-col .image .viewPD {
+    width: 130px;
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px ;
+    border-radius: 15px;
+    color: black;
+    opacity: 0;
+}
+.popular .popular-col .image .viewPD:hover{
+    color: white;
+    background: black;
+}
+
+.popular .popular-col:hover img{
+    transform: scale(1.1);
+}
+.popular .popular-col:hover .viewPD{
+    bottom: 60px;
+    opacity: 1;
+}
+.popular .popular-col .content{
+    position: relative;
+}
+.popular .popular-col .content h4{
+    margin:10px 0;
+}
+.popular .vm{
+    width: 100%;
+    text-align: center;
+}
+.popular .vm  .viewMore{
+    display: inline-block;
+    background: orangered;
+    color: white;
+    padding: 10px 30px;
+    margin-top: 40px;
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  VIP Service section @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.vip{
+    position: relative;
+    /* margin-top: 150px; */
+    background-image: url('/shopImage/vip-service.jpg');
+    padding: 100px 15px;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+.vip::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: -1;
+}
+.vip .container .content{
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
+.vip .container .content h2{
+    color: white;
+    font-size: 40px;
+}
+.vip .container .content .vipBtn{
+        background: rgb(0, 0, 0);
+        color: white;
+        padding: 10px 30px;
+        font-size: 17px;
+        cursor: pointer;
+        margin-top: 20px;
+}
+.vip .container .content .vipBtn:hover{
+    color: rgb(249, 224, 0);
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Blog section @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.blog{padding: 80px 0;}
+
+.blog .blog-row{display: grid;
+grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+gap:60px 20px;
+}
+.blog .blog-col .image{position: relative; overflow: hidden;}
+.blog .blog-col .image .show-vp{
+    position: absolute;
+top: -30px; right: 0; background: orangered; color: white; font-size: 14px; padding: 5px;}
+
+
+
+.blog .blog-col h6{margin-top: 5px; color: rgb(78, 78, 78);}
+.blog .blog-col h3 a{ color: black; margin: 15px 0; display: block; font-weight: 600;}
+
+.blog .blog-col p{
+    color: rgb(170, 170, 170);
+    font-size: 14px;line-height: 22px;
+}
+
+.blog .blog-col:hover h3 a{color: orangered;}
+.blog .blog-col:hover .show-vp{top: 0;}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Footer Section @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.footer{
+    background: rgb(32, 32, 32);color: white;
+    padding: 80px 0;
+}
+
+.footer .footer-row{
+    display: grid;
+    gap: 40px;
+grid-template-columns: repeat(auto-fit,minmax(250px,1fr));}
+
+.footer .footer-row .footer-col >*{font-size: 15px;}
+/* .footer .footer-row .footer-col{border: 1px solid red;} */
+.footer .footer-row .footer-col h5{
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+.footer .footer-row .footer-col ul li a{
+    display: inline-block;
+  color: rgb(196, 193, 193);
+  margin-bottom: 13px;
+}
+.footer .footer-row .footer-col ul li a:hover{
+   color: orangered;
+}
+.footer .footer-col p{
+    font-size: 14px !important;
+    color: rgb(196, 193, 193);
+}
+
+.footer .footer-col input{
+    border-bottom: 2px solid rgb(74, 74, 74);
+    background: none;
+    width: 100%;
+    color: white;
+    padding:  10px;
+}
+
+.footer .footer-col button{
+    border-radius: 10px;
+    background: rgb(248, 100, 46);
+    color: white;
+    margin-top: 20px;padding: 10px 30px;
+}
+.footer .footer-col button:hover{
+    background: rgb(249, 66, 0);
+    cursor: pointer;
+}
+
+
+.footer .allCredit{
+    border-top: 1px solid rgb(74, 74, 74,.5);
+    margin-top: 60px;
+    padding: 30px 0 0 ;
+    text-align: center;
+}
+
+.footer .allCredit img{
+    width: 40px;
+    height: 25px;
+}
+.footer .credit-builder{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(137, 135, 135);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+@@@@@@@@@@@@@@@@@@@@@@ MEDIA QUERY @@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+
+
+@media(max-width:991px){
+    /* Register system */
+    .register-row{
+        width: 100%;
+        min-width: 300px;
+        max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+    .register-row .regis-img{
+        display: none;
+    }
+
+    .register-row .register-col .changeCart .login-cart{
+        width: 100% !important;
+        left: 900px ;
+    }
+
+
+
+
+     /* **************** Promotion**************** */
+     .promotion .promotion-row{
+    grid-template-columns: repeat(4,1fr);
+    }
+    
+     .promotion .po-1{
+        grid-column: 1/3;
+ grid-row: 1/3;
+     }
+     .promotion .po-2{
+        grid-column: 3/5;
+        grid-row: 1/2;
+      }
+     
+     .promotion .po-3{
+        grid-column: 3/5;
+        grid-row: 2/3;
+      }
+      .promotion .po-4{
+        grid-row: 3/4;
+        grid-column: 1/3;
+      }
+     .promotion .po-5{
+        grid-row: 3/4;
+        grid-column: 3/5;
+      }
+}
+@media(max-width:768px){
+     /* **************** Navbar **************** */
+    .navigationBar .container .logo{font-size: 20px;}
+
+.navigationBar  .menuBar{display: block;}
+
+    .navigationBar .container .navList{
+        background: rgb(241, 241, 241);
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        display: block;
+        padding: 10px 15px;
+clip-path: polygon(0 0,100% 0,100% 0, 0 0);
+transition: all .4s ease-in-out;
+    }
+
+    .navigationBar .container .navList.active{
+      clip-path: polygon(0 0,100% 0,100% 100%, 0 100%);
+    }
+
+    .navigationBar .container .navList li a{
+        border: 1px solid rgb(164, 163, 163);
+        padding: 0;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        
+    }
+    /* menuBar Toggle*/
+.menuBar span{
+    display: inline-block;
+    background: rgb(30, 29, 29);
+width: 3px;
+height: 25px;
+}
+.menuBar>*{  transition: 0.4s;}
+
+.menuBar.active .b1{
+    transform: translate(8px, -1px) rotate(45deg);
+}
+.menuBar.active .b2{
+    opacity: 0;
+    transform: translateY(-10px);
+}
+.menuBar.active .b3{
+    transform: translate(-7px, -1px) rotate(-45deg);
+
+}
+ /* **************** Header **************** */
+
+   .header .swiper-slide .container .content span{
+   font-size: 14px;
+   }
+   .header .swiper-slide .container .content h3{
+   font-size: 30px;
+   font-weight: 600;
+   }
+   .header .swiper-slide .container .content h2{
+   font-size: 40px;
+   font-weight: 600;
+   }
+   .header .swiper-slide .container .content  p{
+    font-size: 15px;
+       margin-bottom: 20px;
+   }
+
+   /********************* PRODUCT CATEGORY************* */
+  .product-category-col .content h2{ font-size: 25px;}
+
+   /************************VIP SERVICE *********************  */
+  .vip .container .content h2{
+    color: white;
+    font-size: 30px;
+}
+}
+@media(max-width:640px){
+    /* Register system */
+    .register-row{margin: 60px;}
+
+    .product-category-row{
+        display: block;
+    }
+      /************************VIP SERVICE *********************  */
+  .vip .container .content h2{
+    color: white;
+    font-size: 28px;
+}
+}
+@media(max-width:576px){
+/* Register system */
+.register-row{margin: 40px;}
+
+    .top-nav{display: none;}
+
+
+    /* **************** Header **************** */
+    .header .swiper-slide .container .content{
+        width: 100%;
+        margin:0 1rem;
+        text-align: center !important;
+       }
+       .header .swiper-slide .container .content  p{
+           margin-bottom: 25px;
+           margin-top: 10px;
+       }
+       
+       .swiper-button-next,
+       .swiper-button-prev{
+          top: 95% !important;
+       }
+       .header .swiper-slide::after{
+        content: '';
+        background: rgba(164, 164, 164, 0.5);
+    }
+    .header .header-btn-bx{
+       justify-content: center;
+    }
+
+
+    /********************Promotion Section ********************/
+      .promotion .promotion-row{
+        display: grid !important;
+        grid-template-columns: repeat(2,1fr) !important;
+        }
+        .promotion .po-1{
+            grid-column: 1/3;
+     grid-row: 1/2;
+         }
+        .promotion .po-1 p{
+        font-size: 10px;
+         }
+         .promotion .po-2{
+             grid-column: 1/3;
+            grid-row: 2/3;
+          }
+         
+         .promotion .po-3{
+             grid-column: 1/3;
+            grid-row: 3/4;
+          }
+          .promotion .po-4{
+            grid-row: 4/5;
+             grid-column: 1/3;
+          }
+         .promotion .po-5{
+            grid-row: 5/6;
+             grid-column: 1/3;
+          }
+            /************************VIP SERVICE *********************  */
+  .vip .container .content h2{
+    color: white;
+    font-size: 26px;
+}
+        
+}
+@media(max-width:480px){
+    /* register */
+    .register-col .checkUser{
+        /* display: block;
+        text-align: left; */
+        font-size: 13px;
+        }
+        .register-row .register-col .changeCart{
+            position: relative;
+            height: 550px;
+        }
+        
+        /* .register-col .rememberMe input{
+            margin-top: 20px;
+        width: 15px !important;
+        } */
+
+        .register-col .login-cart .createAccount{
+            font-size: 14px;
+        }
+      
+    /* Header content */
+    .header-content{
+        margin: auto;
+        text-align: center;
+        max-width: 500px;
+        margin-bottom: 80px;
+    }
+    
+    .header-content h2{
+        font-size: 30px;
+    }
+    .header-content p{
+        font-size: 15px;
+        margin: 0 2rem;
+    }
+      /************************VIP SERVICE *********************  */
+  .vip .container .content h2{
+    color: white;
+    font-size: 22px;
+}
+}
+@media(max-width:380px){
+    /* Register  */
+    .login-cart .createAccount{
+        font-size: 13px !important;
+    }
+    .navigationBar .container .logo{
+        font-size: 15px ;
+    }
+    .header .content .header-btn{
+
+        padding: 12px 30px;
+
+    }
+}

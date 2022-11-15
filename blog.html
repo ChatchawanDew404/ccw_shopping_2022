@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCW Blog</title>
+    <link rel="stylesheet" href="/component/navbar.css">
+    <link rel="stylesheet" href="/component/footer.css">
+    <link rel="stylesheet" href="/component/register.css">
+    <link rel="stylesheet" href="blog.css">
+        <!-- Font awesome ฉุกเฉิน -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+       
+<section class="register">
+    <div class="register-row ">
+ 
+     <div class="register-col regis-img"><img src="/shopImage/promotion-4.jpg" alt=""></div>
+ 
+     <div class="register-col">
+         
+         <div class="closeBtn">x</div>
+ 
+         <div class="registerBx">
+ 
+             <div class="register-btn">
+                 <p class="register-color">Register</p>
+                 <p class="login-color">Login</p>
+                 <button class="change-btn"></button>
+             </div>
+ 
+             <!-- Register and login box -->
+           <div class="changeCart">
+             <div class="register-cart">
+ 
+                 <div class="inputBx">
+                   <input type="text" placeholder="Enter you fristname">
+                   <input type="text" placeholder="Enter you lastname">
+                 </div>
+                 <input type="text" placeholder="Enter you email">
+                 <input type="text" placeholder="Enter you password">
+                 <textarea name="" id="" cols="30" rows="10" placeholder="Enter you address"></textarea>
+                 <button class="submit-btn">Register</button>
+                 <p class="already-title">Already have an account <span class="clickLogin">Login</span></p>
+                 <p>or</p>
+   
+                 <ul class="social-icon">
+                   <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                   <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                   <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                   <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                 </ul>
+               </div>
+               <div class="login-cart">
+                 <input type="text" placeholder="Enter you fristname">
+                 <input type="text" placeholder="Enter you lastname">
+                   <input type="text" placeholder="Enter you email">
+                   <input type="text" placeholder="Enter you password">
+                   
+                   <button class="submit-btn">Register</button>
+ 
+                   <div class="checkUser">
+                    <div class="rememberMe">
+                     <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                     <label for="vehicle1"> Remember Me</label>
+                    </div>
+                    <p class="forget-password">Forget password ? </p>
+                   </div>
+ 
+                  
+                   <p>or</p>
+     
+                   <ul class="social-icon">
+                     <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                     <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                     <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                     <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                   </ul>
+ 
+                   <div class="createAccount"><p>Don't have any account ? <span class="clickRegister">Register Now</span></p></div>
+               </div>
+   
+           </div>
+      
+         </div>
+     </div>
+    </div>
+ </section>
+    
+ <!-------------------------------- Top navbar------------------------ -->
+ <div class="top-nav">
+     <div class="container">
+         <div class="top-nav-left">
+             <span><i class="fa fa-envelope" aria-hidden="true"></i> examplePJ1234@gmail.com</span>
+             <span><i class="fa fa-phone" aria-hidden="true"></i> +012 345 6789</span>
+         </div>
+         <div class="top-nav-right">
+                 <span><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
+                 <span><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
+                 <span><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></span>
+                 <span><a href=""><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></span>
+                 <span><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></span>
+         </div>
+     </div>
+ </div>
+ 
+
+  <nav class="navigationBar" id="navigationBar">
+    <div class="container">
+        <a href="" class="logo"><i class="fa fa-shopping-bag" aria-hidden="true"></i> CCW STORE</a>
+
+        <div class="menuBar">
+            <span class="b1">.</span>
+            <span class="b2">.</span>
+            <span class="b3">.</span>
+        </div>
+
+        <ul class="navList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="feature.html">Feature</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="btn-cart-login">
+            <button class="cartBtn" id="cartBtn">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <div class="amountCart">0</div>
+            </button>
+            <button class="loginBtn" id="loginBtn"><i class="fa fa-user" aria-hidden="true"></i></button>
+        </div>
+
+
+    </div>
+
+    <div class="navbar-slide-bg"></div>
+
+    <div class="navbar-slide">
+        <div class="nav-slide-header">
+            <h2>YOUR CART</h2>
+            <i class='bx bx-x' id="navbar-slide-close"></i>
+        </div>
+
+        <div class="navbar-slide-product-container">
+
+            <div class="navbar-slide-product">
+                <div class="image"><img src="/shopImage/product-01.jpg" alt=""></div>
+                <div class="content">
+                    <p class="title">White Shirt Pleat</p>
+                    <div class="navbar-slide-product-sum">
+                        <span class="quantity">1</span> x <span class="price">50.00$</span>
+                    </div>
+                </div>
+                <div class="delete-product">
+                    <i class='bx bxs-trash'></i>
+                </div>
+            </div>
+
+            <div class="navbar-slide-product">
+                <div class="image"><img src="/shopImage/product-01.jpg" alt=""></div>
+                <div class="content">
+                    <p class="title">White Shirt lorem Pleat</p>
+                    <div class="navbar-slide-product-sum">
+                        <span class="quantity">1</span> x <span class="price">50.00$</span>
+                    </div>
+                </div>
+                <div class="delete-product">
+                    <i class='bx bxs-trash'></i>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="navbar-slide-total">
+            <p>Sub Total:</p>
+            <p class="navbar-total">00.00$</p>
+        </div>
+
+        <button class="nav-view"><a href="feature.html">View Cart</a></button>
+    </div>
+
+</nav>
+
+
+
+
+ <!-- Blog banner -->
+<div class="blog-banner">
+    <div class="container">
+        <div class="content">
+            <h2>BLOG</h2>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="blog">
+    <div class="container">
+        <div class="blog-left">
+
+           <div class="box-1">
+            <div class="image"><img src="/shopImage/blog-01.jpg" alt="">
+            <div class="time">
+                <h2>16</h2>
+                <p>Jan 2022</p>
+            </div>
+        </div>
+            <div class="content">
+                <h2>8 Inspiring Ways to Wear Dresses in the Winter</h2>
+                <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius</p>
+
+                <div class="comment">
+                    <ul>
+                        <li>  By Admin </li>
+                        <li>| StreetStyle, Fashion, Couple |</li>
+                        <li> 8 Comments </li>
+                    </ul>
+
+                    <a href="">CONTINUE READING <i class='bx bxs-right-arrow-alt'></i></a>
+                </div>
+            </div>
+           </div>
+
+           <div class="box-2">
+
+  
+      <div class="mini-box">
+        <div class="image"><img src="/shopImage/blog-01.jpg" alt="">
+            <div class="time">
+                <h4>16</h4>
+                <p>Jan 2022</p>
+            </div>
+        </div>
+        <div class="content">
+            <h5>The Great Big List of Men’s Gifts for the Holidays</h5>
+        </div>
+    </div>
+      <div class="mini-box">
+        <div class="image"><img src="/shopImage/blog-02.jpg" alt="">
+            <div class="time">
+                <h4>16</h4>
+                <p>Jan 2022</p>
+            </div>
+        </div>
+        <div class="content">
+            <h5>The Great Big List of Men’s Gifts for the Holidays</h5>
+        </div>
+    </div>
+      <div class="mini-box">
+        <div class="image"><img src="/shopImage/blog-03.jpg" alt="">
+            <div class="time">
+                <h4>16</h4>
+                <p>Jan 2022</p>
+            </div>
+        </div>
+        <div class="content">
+            <h5>The Great Big List of Men’s Gifts for the Holidays</h5>
+        </div>
+    </div>
+      <div class="mini-box">
+        <div class="image"><img src="/shopImage/blog-03.jpg" alt="">
+            <div class="time">
+                <h4>16</h4>
+                <p>Jan 2022</p>
+            </div>
+        </div>
+        <div class="content">
+            <h5>The Great Big List of Men’s Gifts for the Holidays</h5>
+        </div>
+    </div>
+      <div class="mini-box">
+        <div class="image"><img src="/shopImage/blog-01.jpg" alt="">
+            <div class="time">
+                <h4>16</h4>
+                <p>Jan 2022</p>
+            </div>
+        </div>
+        <div class="content">
+            <h5>The Great Big List of Men’s Gifts for the Holidays</h5>
+        </div>
+    </div>
+      <div class="mini-box-1">
+        <div class="image"><img src="/shopImage/blog-02.jpg" alt="">
+            <div class="time">
+                <h4>16</h4>
+                <p>Jan 2022</p>
+            </div>
+        </div>
+        <div class="content">
+            <h5>The Great Big List of Men’s Gifts for the Holidays</h5>
+        </div>
+    </div>
+
+           </div>
+
+           <div class="box-1">
+    <div class="image"><img src="/shopImage/blog-02.jpg" alt="">
+    <div class="time">
+        <h2>16</h2>
+        <p>Jan 2022</p>
+    </div>
+</div>
+    <div class="content">
+        <h2>8 Inspiring Ways to Wear Dresses in the Winter</h2>
+        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius</p>
+
+        <div class="comment">
+            <ul>
+                <li>  By Admin </li>
+                <li>| StreetStyle, Fashion, Couple |</li>
+                <li> 8 Comments </li>
+            </ul>
+
+            <a href="">CONTINUE READING <i class='bx bxs-right-arrow-alt'></i></a>
+        </div>
+    </div>
+           </div>
+
+           <div class="box-4">
+            <div class="left-bx">
+                <div class="mini-box-1">
+                    <div class="image"><img src="/shopImage/blog-01.jpg" alt=""></div>
+                    <div class="content">
+                        <p>16 Jan 2022</p>
+                        <h5>5 Winter-to-Spring Fashion Trends to Try Now</h5>
+                    </div>
+                </div>
+                <div class="mini-box-1">
+                    <div class="image"><img src="/shopImage/blog-01.jpg" alt=""></div>
+                    <div class="content">
+                        <p>16 Jan 2022</p>
+                        <h5>5 Winter-to-Spring Fashion Trends to Try Now</h5>
+                    </div>
+                </div>
+                <div class="mini-box-1">
+                    <div class="image"><img src="/shopImage/blog-01.jpg" alt=""></div>
+                    <div class="content">
+                        <p>16 Jan 2022</p>
+                        <h5>5 Winter-to-Spring Fashion Trends to Try Now</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="right-bx">
+                <div class="mini-box-1">
+                    <div class="image"><img src="/shopImage/blog-01.jpg" alt=""></div>
+                    <div class="content">
+                        <p>16 Jan 2022</p>
+                        <h5>5 Winter-to-Spring Fashion Trends to Try Now</h5>
+                    </div>
+                </div>
+                <div class="mini-box-1">
+                    <div class="image"><img src="/shopImage/blog-01.jpg" alt=""></div>
+                    <div class="content">
+                        <p>16 Jan 2022</p>
+                        <h5>5 Winter-to-Spring Fashion Trends to Try Now</h5>
+                    </div>
+                </div>
+                <div class="mini-box-1">
+                    <div class="image"><img src="/shopImage/blog-01.jpg" alt=""></div>
+                    <div class="content">
+                        <p>16 Jan 2022</p>
+                        <h5>5 Winter-to-Spring Fashion Trends to Try Now</h5>
+                    </div>
+                </div>
+            </div>
+           </div>
+
+
+           <ul class="pages">
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+           </ul>
+        </div>
+
+        <div class="blog-right">
+            <div class="search">
+                <input type="text" placeholder="Search something...">
+                <i class='bx bx-search-alt-2' ></i>
+            </div>
+
+            <div class="category">
+                <h2>Categories</h2>
+                <ul>
+                    <li><a href="">Fashion</a></li>
+                    <li><a href="">Beauty</a></li>
+                    <li><a href="">Street Style</a></li>
+                    <li><a href="">Life Style</a></li>
+                    <li><a href="">DIY & Crafts</a></li>
+                </ul>
+            </div>
+
+            <div class="products">
+                <h2>Featured Products</h2>
+                <div class="mini-box">
+                    <div class="image"><img src="/shopImage/product-01.jpg" alt=""></div>
+                    <div class="content">
+                        <a href="shop.html" class="title">Nixon Porter Leather Watch In Tan</a>
+                        <p class="price">  $17.00</p>
+                    </div>
+                </div>
+                <div class="mini-box">
+                    <div class="image"><img src="/shopImage/product-01.jpg" alt=""></div>
+                    <div class="content">
+                        <a href="shop.html" class="title">Nixon Porter Leather Watch In Tan</a>
+                        <p class="price">  $17.00</p>
+                    </div>
+                </div>
+                <div class="mini-box">
+                    <div class="image"><img src="/shopImage/product-01.jpg" alt=""></div>
+                    <div class="content">
+                        <a href="shop.html" class="title">Nixon Porter Leather Watch In Tan</a>
+                        <p class="price">  $17.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="archive">
+                <h2>Archive</h2>
+                <ul>
+                    <li><span class="month">July 2022</span><span>(10)</span></li>
+                    <li><span class="month">June 2022</span><span>(14)</span></li>
+                    <li><span class="month">May 2022</span><span>(24)</span></li>
+                    <li><span class="month">April 2022</span><span>(31)</span></li>
+                    <li><span class="month">March 2022</span><span>(22)</span></li>
+                    <li><span class="month">February 2022</span><span>(26)</span></li>
+                    <li><span class="month">January 2022</span><span>(7)</span></li>
+                    <li><span class="month">December 2021</span><span>(35)</span></li>
+                </ul>
+            </div>
+
+            <div class="tags">
+                <h2>Tags</h2>
+                <span>Fashion</span>
+                <span>Lifestyle</span>
+                <span>Denim</span>
+                <span>Streetstyle</span>
+                <span>Crafts</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer section -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-row">
+
+        <div class="footer-col">
+            <h5>CATEGORIES</h5>
+             <ul>
+                <li><a href="">Women</a></li>
+                <li><a href="">Men</a></li>
+                <li><a href="">Shoes</a></li>
+                <li><a href="">Watches</a></li>
+            </ul>
+        </div>
+
+
+        <div class="footer-col">
+            <h5>HELP</h5>
+            <ul>
+                <li><a href="">Track Order</a></li>
+                <li><a href="">Returns</a></li>
+                <li><a href="">Shipping</a></li>
+                <li><a href="">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>GET IN TOUCH</h5>
+            <p>Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 23 456 7890</p>
+        </div>
+
+        <div class="footer-col">
+            <h5>NEWSLETTER</h5>
+            <input type="text" placeholder="example1234@gmail.com">
+            <button>Subscribe</button>
+        </div>
+
+    </div>
+
+    <div class="allCredit">
+        <span><img src="/shopImage/icon-pay-01.png" alt=""></span>
+        <span><img src="/shopImage/icon-pay-02.png" alt=""></span>
+        <span><img src="/shopImage/icon-pay-03.png" alt=""></span>
+        <span><img src="/shopImage/icon-pay-04.png" alt=""></span>
+        <span><img src="/shopImage/icon-pay-05.png" alt=""></span>
+    </div>
+<div class="credit-builder">
+    <p>Copyright ©2022 All rights reserved | Made with <i class='bx bx-heart'></i> by CCW</p>
+</div>
+    </div>
+</footer>
+
+
+
+
+    <!-- Font awesome cdn -->
+<script src="/systemShopping/fontawesome.min.js"></script>
+<!-- Swiper CDN -->
+<script src="/swiperCDN/swiper-bundle.min.js"></script>
+<!-- Sweet alert -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- System Javascript -->
+<script src="/systemShopping/data.js"></script>
+<script src="/systemShopping/navbar.js"></script>
+<script src="/systemShopping/register.js"></script>
+</body>
+</html>
